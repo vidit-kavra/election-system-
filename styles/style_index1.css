@@ -1,0 +1,414 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+
+	//text-align: center;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*@keyframes fading {
+	0%{
+		left:0;
+	}
+	100%
+	{
+		left:100%;
+	}
+}*/
+
+.vish_fading{
+	animation:fading 6s infinite;
+	animation-timing-function: ease;
+}
+
+
+
+@keyframes fading{
+	0%{opacity:0}50%{opacity:1}100%{opacity:0}
+	}
+	
+/*.vish_sliding {
+	animation:sliding 6s infinite;
+}
+
+@keyframes sliding{
+	0%{width: 0%}50%{width:100%}100%{width:0%}
+}*/
+
+.header {
+	//font-family: 'Fredericka the Great', cursive;
+	//font-family: 'Bungee Inline', cursive;
+	//font-family: 'Berkshire Swash', cursive;
+	//font-family: 'Limelight', cursive;
+	//font-family: 'Monoton', cursive;
+	margin-top: 15px;
+	height: 90px;
+	background-color: rgb(255,255,255);
+	//background-color:black;
+	color: rgb(244, 66, 83);
+	text-align: center;
+	line-height:86px;
+	font-size:42px;
+	//letter-spacing:3px;
+	border-bottom: 2px solid rgb(244, 66, 83);
+	//text-shadow: 5px 2px black;
+	//text-shadow: 3px 1px black;
+	margin-left: 41px;
+	margin-right: 41px;
+    font-family: 'Poiret One', cursive;
+}
+
+.grid {
+	margin-top: -20px;
+	margin-left: 41px;
+	display: grid;
+	width:94%;
+	grid-template-rows: 45px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 40px;
+	background-color: rgb(255,255,255);
+	//border: 2px solid black;
+	border-radius: 4px;
+	grid-column-gap:3px;
+	vertical-align: top;
+}
+
+.dropcontent {
+	display: none;
+	background-color:none;
+	height: wrap-content;
+	width: wrap-content;
+	position: absolute;
+	right:20px; 
+	z-index: 1;
+	top:158px;
+}
+
+.item {
+	display: block;
+	color: black;
+	font-weight: bold;
+	text-decoration:none;
+	padding: 12px 16px;
+	//border: 1px solid black;
+	margin: 4px 6px;
+	-webkit-transition: 0.5s;
+	text-align: center;
+}
+
+.item:hover {
+	color: white;
+	background-color:rgb(244, 66, 83) ;
+}
+
+.user_info {
+	text-align: center;
+	position: relative;
+	top:6px;
+	display: inline-block;
+	width: 20%;
+	height: 400px;
+	background-color: gray;
+	vertical-align: top;
+}
+
+.icon {
+	margin: 0 auto;
+	width: 50px;
+	height: 40px;
+}
+
+@keyframes back_calibrate {
+	0%{
+		 background-position:1250px 0px;
+	 }
+	  75%{
+		 background-position:1250px 0px;
+	 }
+	 87.8%{
+		 background-position:0px 0px;
+	 }
+	 100%{
+		 background-position:0px 0px;
+	 }
+}
+
+.body {
+	position:relative;
+	top:6px;
+	//background-color:white;
+	background-image: url(proto3.jpg);
+	background-repeat: no-repeat;
+	background-size: 1250px 470px;
+	background-position:1250px 0px;
+	width: 1250px;
+	display:block;
+	height:470px;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: top;
+	overflow: hidden;
+	animation-name: back_calibrate;
+	animation-duration: 12s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+.not_panel {
+	position: relative;
+	top:6px;
+	width: 26%;
+	display:inline-block;
+	height: 200px;
+	background-color:white; 
+	clear: right;
+	margin-left: 40px;
+	vertical-align:top;
+	overflow: scroll;
+}
+
+.tabbutton {
+	/*text-decoration: none;
+	line-height: 40px;
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(244, 66, 83);
+	-webkit-transition: 0.5s;
+	border: none;*/
+	display: block; 
+	-webkit-transition: 0.5s;
+	text-align: center;
+}
+.tabbutton:hover {
+	//box-shadow: 2px 2px 5px black;
+	background-color: rgb(244, 66, 83);
+	color: white;
+	border-radius: 2px;
+}
+
+.footer {
+	margin-top: 10px;
+	background-color: lightgray;
+	width: 95%;
+	height:150px;
+	margin-left: 38px;
+	vertical-align: top;
+}
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.anounce {
+	color: rgb(244, 66, 83);
+	text-align:left;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.droptrigger:hover .dropcontent{
+	display: block;
+}
+
+/*@keyframes flip1 {
+	0%{
+		-webkit-transform: rotateY(0deg);
+	}
+	50%{
+		z-index:1;
+	}
+	100%{
+		-webkit-transform: rotateY(180deg);
+	}
+}
+
+@keyframes flip2 {
+	0%{
+		-webkit-transform: rotateY(180deg);
+	}
+	50%{
+		z-index:2;
+	}
+	100%{
+		-webkit-transform: rotateY(360deg);
+	}
+}
+
+.flip {
+	display: inline-block;
+	position: relative;
+	height: 250px;
+	width: 250px;
+}
+
+.front {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color:red;
+}
+.back {
+	
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color:yellow;
+}
+
+.flip:hover .front{
+	animation-name: flip1;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+}
+
+.flip:hover .back {
+	animation-name: flip2;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+}*/
+
+.card {
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	color: rgba(244,66,83,0.9);
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+}
+
+.over {
+	position:absolute;
+	height: 100%;
+	bottom:0;
+	top:0;
+	//width:0;
+	//left: 100%;
+	width: 100%;
+	left: 0;
+	color: white;
+	background-color: rgba(244,66,83,0.9);
+	//overflow: hidden;
+	transition: 1s ease;
+}
+ .card:hover .over {
+	width:0;
+	left: 100%;
+	opacity: 0.5;
+	// width: 100%;
+	//left: 0;
+ }
+
+ .det {
+ 	text-align: center;
+ 	font-size: 32px;
+ }
+
+ .deb {
+ 	text-align: center;
+ 	font-size: 20px;
+ 	color: rgba(244,66,83,0.9);
+ }
+
+ .par {
+	 text-align: center;
+	 display:block;
+	 margin:auto auto;
+	 font-size: 25px;
+	 width:100%;
+	 height: 100%;
+	 padding-top: 8px;
+	 border-radius:2px;
+	 -webkit-transition: 0.5s;
+ }
+ 
+ .par:hover {
+	 background-color:rgb(244, 66, 83);
+	 color: white;
+ }
+ 
+ @keyframes slider{
+	 0%{
+		 left: 0;
+	 }
+	 13%{
+		 left: -1250px;
+	 }
+	 25%{
+		 left: -1250px;
+	 }
+	38%{
+		 left: -2500px;
+	 }
+	50%{
+		 left: -2500px;
+	 }	 
+	 63%{
+		 left: -3750px;
+	 }
+	  75%{
+		 left: -3750px;
+	 }
+	 88%{
+		 left: -5000px;
+	 }
+	 100%{
+		 left: -5000px;
+	 }
+ }
+ 
+ .image_holder {
+	width: 5000px;
+	background-color: white;
+	height: 470px;
+	clear: both;
+	position: relative;
+	animation-name: slider;
+	animation-duration: 12s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	//background-color:black;
+	//background-image: url("proto3.jpg");
+ }
+ 
+ .slider_image{
+	 width: 1250px;
+	 height:470px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+ }
+ 
+ ::-webkit-scrollbar {
+	 width: 5px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+	 
+    background:white; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 2px;
+}
